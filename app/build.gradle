@@ -17,14 +17,23 @@ android {
         buildConfigField "String", "BASE_URL", '"https://swapi.dev"'
 
     }
+    
+    signingConfigs {
+        release {
+            keyAlias 'key0'
+            keyPassword '123456789'
+            storeFile file('debug-key.jks')
+            storePassword '123456789'
+        }
+        debug {}
+    }
 
     buildTypes {
         release {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.debug
-            debuggable true
+            signingConfig signingConfigs.release
         }
         debug {
             versionNameSuffix "-dev"
@@ -34,15 +43,7 @@ android {
 
     }
 
-    signingConfigs {
-        debug {
-            keyAlias 'key0'
-            keyPassword '123456789'
-            storeFile file('debug-key.jks')
-            storePassword '123456789'
-        }
-        release {}
-    }
+
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
