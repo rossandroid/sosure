@@ -22,7 +22,7 @@ android {
         release {
             keyAlias 'key0'
             keyPassword '123456789'
-            storeFile file('debug-key.jks')
+            storeFile file('release-key.jks')
             storePassword '123456789'
         }
         debug {}
