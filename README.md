@@ -6,12 +6,12 @@
 - While this is quite a simple feature, develop it like it was some production code you want to ship :) 
 
 -
-#Solution details
+# Solution details
 - This Kotlin Android app implements the **MVVM** pattern design.
 - Project has been configured to deploy the **debug** and **release** version.
 
 
-##Library Used
+## Library Used
 - Dagger2: *injects PeopleApi into PeopleService, and injects PeopleService into NameViewModel*
 - Retrofit2: *interacts with REST API*
 - Timber: *logging (enabled only for the debug build variant)*
