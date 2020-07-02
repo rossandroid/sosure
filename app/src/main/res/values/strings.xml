@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">InterviewTest</string>
+    <string name="error_text">Error during loading Data</string>
+    <string name="get_data">Get Data</string>
 </resources>
